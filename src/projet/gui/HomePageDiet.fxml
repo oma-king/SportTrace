@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="525.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projet.gui.HomePageDietController">
+   <children>
+      <Pane fx:id="backgroundPane" onMouseClicked="#resetValues" prefHeight="525.0" prefWidth="1000.0">
+         <children>
+            <Pane fx:id="choicePane" layoutX="26.0" layoutY="14.0" prefHeight="500.0" prefWidth="226.0">
+               <children>
+                  <Text fx:id="MyTextZone" layoutX="18.0" layoutY="71.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Veuillez choisir le nombre des calories pour le régimes que vous voulez suivre :" textAlignment="CENTER" wrappingWidth="191.0" />
+               </children></Pane>
+            <Button fx:id="downloadBtn" layoutX="69.0" layoutY="449.0" mnemonicParsing="false" onAction="#downloadpdf" prefHeight="26.0" prefWidth="150.0" text="Télécharger Pdf" />
+            <Button fx:id="transitionCRUD" layoutX="783.0" layoutY="449.0" mnemonicParsing="false" onAction="#transitionCRUDdiet" prefHeight="26.0" prefWidth="191.0" text="Gestion des régimes" />
+            <Button fx:id="btnClose" layoutX="783.0" layoutY="487.0" mnemonicParsing="false" onAction="#closeWindow" prefHeight="26.0" prefWidth="191.0" text="Fermer" />
+         </children>
+      </Pane>
+      <Pane fx:id="lunchPane" layoutX="647.0" layoutY="53.0" prefHeight="166.0" prefWidth="334.0" />
+      <Pane fx:id="dinnerPane" layoutX="261.0" layoutY="273.0" prefHeight="166.0" prefWidth="334.0" />
+      <TextArea fx:id="tfLunchUser" editable="false" layoutX="763.0" layoutY="94.0" prefHeight="89.0" prefWidth="200.0" />
+      <TextArea fx:id="tfDinnerUser" editable="false" layoutX="375.0" layoutY="319.0" prefHeight="90.0" prefWidth="200.0" />
+      <TextArea fx:id="tfBreakfastUser" editable="false" layoutX="375.0" layoutY="94.0" prefHeight="90.0" prefWidth="200.0" />
+      <TextArea fx:id="tfSnacksUser" editable="false" layoutX="763.0" layoutY="319.0" prefHeight="90.0" prefWidth="200.0" />
+      <Button fx:id="reroll" layoutX="69.0" layoutY="287.0" mnemonicParsing="false" onAction="#rerollDiet" prefHeight="26.0" prefWidth="150.0" text="Relancer" />
+      <ComboBox fx:id="CbCaloriesUser" layoutX="69.0" layoutY="172.0" prefHeight="26.0" prefWidth="150.0" />
+      <Label layoutX="375.0" layoutY="61.0" text="Petit déjeuner" />
+      <Label layoutX="763.0" layoutY="284.0" text="Gouter" />
+      <Label layoutX="375.0" layoutY="284.0" text="Diner" />
+      <Label layoutX="763.0" layoutY="61.0" text="Déjeuner" />
+      <ImageView fitHeight="90.0" fitWidth="90.0" layoutX="271.0" layoutY="94.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../Graphics/breakfast_icon.png" />
+         </image></ImageView>
+      <ImageView fitHeight="90.0" fitWidth="90.0" layoutX="658.0" layoutY="94.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../Graphics/lunch_icon.png" />
+         </image></ImageView>
+      <ImageView fitHeight="90.0" fitWidth="90.0" layoutX="271.0" layoutY="319.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../Graphics/dinner_icon.png" />
+         </image></ImageView>
+      <ImageView fitHeight="90.0" fitWidth="90.0" layoutX="658.0" layoutY="319.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../Graphics/snacks_icon.png" />
+         </image></ImageView>
+      <Button fx:id="showDiet" layoutX="69.0" layoutY="249.0" mnemonicParsing="false" onAction="#rerollDiet" prefHeight="26.0" prefWidth="150.0" text="Confirmer" />
+   </children>
+</AnchorPane>

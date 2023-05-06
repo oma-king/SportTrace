@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+
+<AnchorPane id="AnchorPane" prefHeight="940.0" prefWidth="1620.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projet.gui.ShowWorkoutController">
+   <children>
+      <Pane fx:id="backgroundPane" layoutX="-2.0" onMouseClicked="#resetValues" prefHeight="947.0" prefWidth="1622.0">
+         <children>
+            <Pane fx:id="CRUDpane" layoutX="57.0" layoutY="17.0" prefHeight="263.0" prefWidth="689.0" />
+            <Pane fx:id="statsPane" layoutX="885.0" layoutY="634.0" prefHeight="237.0" prefWidth="264.0" />
+            <ListView fx:id="listStats2" layoutX="947.0" layoutY="653.0" prefHeight="200.0" prefWidth="115.0" />
+            <ListView fx:id="listStats" layoutX="1070.0" layoutY="653.0" prefHeight="200.0" prefWidth="68.0" />
+            <Label layoutX="890.0" layoutY="653.0" text="Stats :" />
+            <Button fx:id="btnSuppWorkout" layoutX="1289.0" layoutY="734.0" mnemonicParsing="false" onAction="#supprimerWorkout" prefHeight="26.0" prefWidth="283.0" text="Supprimer" />
+            <Button fx:id="btnModifWorkout" layoutX="1289.0" layoutY="687.0" mnemonicParsing="false" onAction="#modifierWorkout" prefHeight="26.0" prefWidth="283.0" text="Modifier" />
+            <Button fx:id="btnAjtWorkout" layoutX="1289.0" layoutY="638.0" mnemonicParsing="false" onAction="#ajouterWorkout" prefHeight="26.0" prefWidth="283.0" text="Ajouter" />
+            <Button fx:id="btnRetour" layoutX="1288.0" layoutY="836.0" mnemonicParsing="false" onAction="#workoutmainTransition" prefHeight="26.0" prefWidth="283.0" text="Retour" />
+            <TextField fx:id="tfGwid" editable="false" layoutX="236.0" layoutY="37.0" prefWidth="150.0" />
+            <TextField fx:id="tfGwname" layoutX="236.0" layoutY="87.0" prefWidth="150.0" />
+            <TextField fx:id="tfGwnbr_series" layoutX="236.0" layoutY="141.0" prefWidth="150.0" />
+            <TextField fx:id="tfGwduree_serie" layoutX="236.0" layoutY="194.0" prefWidth="150.0" />
+            <Label layoutX="74.0" layoutY="40.0" text="ID" />
+            <Label layoutX="74.0" layoutY="89.0" text="Nom" />
+            <Label layoutX="74.0" layoutY="141.0" text="Nombre de series" />
+            <Label layoutX="74.0" layoutY="194.0" text="Durée d'une serie" />
+            <Label layoutX="74.0" layoutY="242.0" text="Muscle" />
+            <ComboBox fx:id="tfGwbody_part" layoutX="235.0" layoutY="239.0" onAction="#setBodyPartImages" prefWidth="160.0" />
+         </children></Pane>
+      <TableView fx:id="table_workout" layoutX="819.0" layoutY="148.0" onMouseClicked="#getSelectedWorkout" prefHeight="437.0" prefWidth="790.0">
+        <columns>
+          <TableColumn fx:id="colID" prefWidth="46.400146484375" text="ID" />
+          <TableColumn fx:id="colNbr_series" prefWidth="122.39984130859375" text="Nombre de series" />
+            <TableColumn fx:id="colDuree_serie" prefWidth="104.5333251953125" text="Durée /serie" />
+            <TableColumn fx:id="colBody_part" prefWidth="99.7333984375" text="Muscle" />
+            <TableColumn fx:id="colName" prefWidth="169.86669921875" text="Nom" />
+            <TableColumn fx:id="colDescription" prefWidth="229.0667724609375" text="Description" />
+        </columns>
+      </TableView>
+      <TextArea fx:id="tfGwdesciption" layoutX="529.0" layoutY="34.0" prefHeight="229.0" prefWidth="200.0" />
+      <Label layoutX="427.0" layoutY="39.0" text="Description">
+         <textFill>
+            <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </RadialGradient>
+         </textFill></Label>
+      <TextField fx:id="rechercheWorkout" layoutX="1186.0" layoutY="84.0" promptText="Nom / Muscle" />
+      <Label layoutX="1070.0" layoutY="87.0" text="Recherche" />
+      <ImageView fx:id="BodyFrontView" fitHeight="600.0" fitWidth="300.0" layoutX="68.0" layoutY="340.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../Graphics/Front-Body.png" />
+         </image></ImageView>
+      <ImageView fx:id="BodyBackView" fitHeight="600.0" fitWidth="380.0" layoutX="427.0" layoutY="335.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../Graphics/Back-Body.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="iChest" fitHeight="69.0" fitWidth="115.0" layoutX="161.0" layoutY="441.0" onMousePressed="#SetComboBoxChest" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="iAbs" fitHeight="112.0" fitWidth="96.0" layoutX="170.0" layoutY="510.0" onMousePressed="#SetComboBoxAbs" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="iArms11" fitHeight="151.0" fitWidth="46.0" layoutX="121.0" layoutY="477.0" onMousePressed="#SetComboBoxArms" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="iShoulders11" fitHeight="69.0" fitWidth="46.0" layoutX="136.0" layoutY="428.0" onMousePressed="#SetComboBoxShoulders" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="iLegs11" fitHeight="252.0" fitWidth="60.0" layoutX="156.0" layoutY="609.0" onMousePressed="#SetComboBoxLegs" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="iBack" fitHeight="154.0" fitWidth="96.0" layoutX="565.0" layoutY="438.0" onMousePressed="#SetComboBoxBack" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="iLegs2" fitHeight="180.0" fitWidth="122.0" layoutX="558.0" layoutY="645.0" onMousePressed="#SetComboBoxLegs" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="iGlutes" fitHeight="79.0" fitWidth="105.0" layoutX="565.0" layoutY="590.0" onMousePressed="#SetComboBoxGlutes" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="iShoulders21" fitHeight="58.0" fitWidth="38.0" layoutX="533.0" layoutY="449.0" onMousePressed="#SetComboBoxShoulders" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="iArms21" fitHeight="111.0" fitWidth="96.0" layoutX="465.0" layoutY="487.0" onMousePressed="#SetComboBoxArms" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="iLegs12" fitHeight="252.0" fitWidth="60.0" layoutX="224.0" layoutY="609.0" onMousePressed="#SetComboBoxLegs" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="iShoulders12" fitHeight="69.0" fitWidth="46.0" layoutX="255.0" layoutY="428.0" onMousePressed="#SetComboBoxShoulders" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="iArms12" fitHeight="151.0" fitWidth="46.0" layoutX="270.0" layoutY="477.0" onMousePressed="#SetComboBoxArms" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="iArms22" fitHeight="111.0" fitWidth="96.0" layoutX="668.0" layoutY="487.0" onMousePressed="#SetComboBoxArms" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="iShoulders22" fitHeight="58.0" fitWidth="38.0" layoutX="656.0" layoutY="448.0" onMousePressed="#SetComboBoxShoulders" pickOnBounds="true" preserveRatio="true" />
+   </children>
+</AnchorPane>
