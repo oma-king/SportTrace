@@ -16,7 +16,7 @@
             <Pane fx:id="logoPane" layoutX="350.0" layoutY="-23.0" prefHeight="150.0" prefWidth="150.0" />
             <ImageView fx:id="LogoHomeDashboard" fitHeight="150.0" fitWidth="200.0" layoutX="350.0" layoutY="-27.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../Graphics/Sportunus_logo.png" />
+                  <Image url="@../../Graphics/Sporttrace_logo.png" />
                </image>
             </ImageView>
             <Button fx:id="Contactus" layoutX="437.0" layoutY="438.0" mnemonicParsing="false" onAction="#ContactUsTransition" text="Contactez nous">

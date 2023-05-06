@@ -20,7 +20,7 @@
                         <Button fx:id="WorkoutandDiet" layoutY="205.0" mnemonicParsing="false" onAction="#LoadWorkoutandDiet" prefHeight="45.0" prefWidth="250.0" text="Sport &amp; Régime" />
                         <ImageView fx:id="AppLogo" fitHeight="157.0" fitWidth="220.0" layoutX="19.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../Graphics/DashboardLogoSportunus.png" />
+                              <Image url="@../../Graphics/DashboardLogoSporttrace.png" />
                            </image>
                         </ImageView>
                         <Button fx:id="Close" layoutX="86.0" layoutY="498.0" mnemonicParsing="false" onAction="#CloseDashboard" prefHeight="46.0" prefWidth="76.0" text="Fermer" />

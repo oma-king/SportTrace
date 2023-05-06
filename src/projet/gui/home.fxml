@@ -34,7 +34,7 @@
       </ImageView>
       <ImageView fx:id="SportunusLogo" fitHeight="150.0" fitWidth="200.0" layoutX="793.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../Graphics/Sportunus_logo.png" />
+            <Image url="@../../Graphics/Sporttrace_logo.png" />
          </image>
       </ImageView>
    </children>
