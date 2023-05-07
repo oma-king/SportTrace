@@ -1,19 +1,19 @@
 #recherchePane{
-    -fx-background-color:  #2edf6e;
+    -fx-background-color:  #1c92d2;
     -fx-background-radius: 20;
 }
 #fieldsPane{
-    -fx-background-color:  #2edf6e;
+    -fx-background-color:  #1c92d2;
     -fx-background-radius: 20;
 }
 #backgroundPane{
-    -fx-background-color: linear-gradient(to bottom, #99ffbe, #6af09b);
+    -fx-background-color: linear-gradient(to bottom, #1c92d2 , #f2fcfe);
 }
 
 
 .button{
     -fx-text-fill: #023796;
-    -fx-background-color: #2edf6e;
+    -fx-background-color: #1c92d2;
     -fx-border-radius: 20;
     -fx-background-radius: 20;
     -fx-padding: 5;    
@@ -22,8 +22,8 @@
     -fx-font-family: "Ebrima";   
 }
 .button:hover {
-    -fx-background-color: #023796;
-    -fx-text-fill: #2edf6e;
+    -fx-background-color: #1c92d2;
+    -fx-text-fill: #1c92d2;
 }
 
 
@@ -56,7 +56,7 @@
     -fx-padding: 0 0 5px 0;
 }
 .table-view .column-header-background .label{
-    -fx-text-fill: #2edf6e;
+    -fx-text-fill: #1c92d2;
 }
 .table-view .column-header {
     -fx-background-color: transparent;
@@ -99,6 +99,6 @@
     -fx-background-color: white;
 }
 .list-cell:filled:hover {
-    -fx-background-color: #2edf6e;
+    -fx-background-color: #1c92d2;
     -fx-text-fill: white;
 }

@@ -141,7 +141,7 @@ public class HomePageDietController implements Initializable {
             alert.showAndWait();
         } else {
             try {
-                String file_name = ("Regime2.pdf");
+                String file_name = ("Regime.pdf");
                 Document document = new Document();
 
                 PdfWriter.getInstance(document, new FileOutputStream(file_name));

@@ -1,24 +1,24 @@
 #detailsPane{
-    -fx-background-color:  #2edf6e;
+    -fx-background-color:  #1c92d2;
     -fx-background-radius: 20;
 }
 
 
 #backgroundPane{
-    -fx-background-color: linear-gradient(to bottom, #99ffbe, #6af09b);
+    -fx-background-color: linear-gradient(to bottom, #1c92d2 , #f2fcfe);
 }
 
 
 .button{
     -fx-text-fill: #023796;
-    -fx-background-color: #2edf6e;
+    -fx-background-color: #1c92d2;
     -fx-border-radius: 20;
     -fx-background-radius: 20;
     -fx-padding: 5;    
 }
 .button:hover {
     -fx-background-color: #023796;
-    -fx-text-fill: #2edf6e;
+    -fx-text-fill: #1c92d2;
 }
 
 
@@ -42,7 +42,7 @@
     -fx-table-cell-border-color: derive(-fx-selection-bar-non-focused, 20%);
 } 
 .list-cell:filled:hover {
-    -fx-background-color: #2edf6e;
+    -fx-background-color: #1c92d2;
     -fx-text-fill: white;
 }
 

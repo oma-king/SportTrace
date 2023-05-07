@@ -148,7 +148,7 @@ public class ingredientCRUD {
     public ObservableList<String> showIngredientSnack(String CaloriesC) {
         ObservableList<String> list = FXCollections.observableArrayList();
         try {
-            String requete = "SELECT name FROM ingredient where category like 'snack' AND calories_category like ?";
+            String requete = "SELECT name FROM ingredient where category like 'snacks' AND calories_category like ?";
             PreparedStatement pst
                     = new MyConnection().cn.prepareStatement(requete);
             pst.setString(1, CaloriesC);

@@ -34,7 +34,6 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
-import org.controlsfx.control.textfield.TextFields;
 import projet.entities.diet;
 import projet.services.dietCRUD;
 import projet.services.ingredientCRUD;
@@ -309,14 +308,17 @@ public class ShowDietController implements Initializable {
         ingredientCRUD icd = new ingredientCRUD();
 
         ObservableList<String> autoCompleteBreakfast = icd.showIngredientBreakfast(cbCalories.getValue());
-        TextFields.bindAutoCompletion(tfBreakfast, autoCompleteBreakfast);
+        tfBreakfast.setText(autoCompleteBreakfast.toString().replace("[", "").replace("]", ""));
+        /*TextFields.bindAutoCompletion(tfBreakfast, autoCompleteBreakfast);*/
         ObservableList<String> autoCompleteDinner = icd.showIngredientDinner(cbCalories.getValue());
-        TextFields.bindAutoCompletion(tfDinner, autoCompleteDinner);
+        tfDinner.setText(autoCompleteDinner.toString().replace("[", "").replace("]", ""));
+        /*TextFields.bindAutoCompletion(tfDinner, autoCompleteDinner);*/
         ObservableList<String> autoCompleteLunch = icd.showIngredientLunch(cbCalories.getValue());
-        TextFields.bindAutoCompletion(tfLunch, autoCompleteLunch);
+        tfLunch.setText(autoCompleteLunch.toString().replace("[", "").replace("]", ""));
+        /*TextFields.bindAutoCompletion(tfLunch, autoCompleteLunch);*/
         ObservableList<String> autoCompleteSnack = icd.showIngredientSnack(cbCalories.getValue());
-        TextFields.bindAutoCompletion(tfSnacks, autoCompleteSnack);
-
+        tfSnacks.setText(autoCompleteSnack.toString().replace("[", "").replace("]", ""));
+       /* TextFields.bindAutoCompletion(tfSnacks, autoCompleteSnack);*/
     }
 
     @FXML
